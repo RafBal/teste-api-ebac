@@ -15,7 +15,7 @@ pipeline {
         stage('Executar Testes') {
             steps {
                 bat '''set NO_COLOR=1 
-npm run exercicio-api.cy.js:run'''
+npm run cy:run'''
             }
         }
     }
