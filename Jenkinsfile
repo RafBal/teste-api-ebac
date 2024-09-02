@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar o reposiório') {
             steps {
-                git branch: 'main', url: 'https://github.com/RafBal/teste-api-ebac/blob/main/cypress/e2e/'
+                git branch: 'main', url: 'https://github.com/RafBal/teste-api-ebac/tree/main/cypress/e2e'
             }
         }
         stage('Instalar dependências') {
