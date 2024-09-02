@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar o reposiório') {
             steps {
-                git branch: 'main', url: 'https://github.com/RafBal/teste-api-ebac.git'
+                git branch: 'main', url: 'https://github.com/RafBal/teste-api-ebac/blob/main/cypress/e2e/'
             }
         }
         stage('Instalar dependências') {
@@ -15,7 +15,7 @@ pipeline {
         stage('Executar Testes') {
             steps {
                 bat '''set NO_COLOR=1 
-npm run cy:run'''
+npm run exercicio-api.cy.js:run'''
             }
         }
     }
